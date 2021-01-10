@@ -1,0 +1,26 @@
+version: '3.7'
+
+services: 
+  db:
+    build: ./mysql
+    restart: on-failure
+    container_name: db_linkaja
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports: 
+      - 3306:3306
+    networks: 
+      - mynetwork
+  app:
+    build: .
+    restart: on-failure
+    container_name: app_linkaja
+    ports: 
+      - 8080:8080
+    depends_on: 
+      - db
+    networks: 
+      - mynetwork
+networks: 
+  mynetwork:
+    driver: bridge
