@@ -16,7 +16,10 @@ This application is a simple REST API for checking saldo and transfer using [Gol
 ### For Development
 
 * Import the database provided in mysql/linkaja.sql
-* Inside .env file, change STAG environtment value become `STAG=dev`
+* Inside .env file, change STAG environtment value become 
+```
+STAG=dev
+```
 * Inside .env.dev file, there are configurations needed for the api to run, change them according to your system. The most important variable that you have to change is:
     - DB_USER
     - DB_PASS
@@ -26,7 +29,10 @@ This application is a simple REST API for checking saldo and transfer using [Gol
 
 ### For Production (Using Docker)
 
-* Inside .env file, change STAG environtment value become `STAG=prod`
+* Inside .env file, change STAG environtment value become 
+```
+STAG=prod
+```
 
 ## How to run?
 To run this application, use `make` command to simplify your workflow.
