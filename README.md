@@ -35,11 +35,15 @@ To run this application, use `make` command to simplify your workflow.
 
 To run unit testing and start application
 
-```make dev```
+```
+make dev
+```
 
 To run application with docker
 
-```make build```
+```
+make build
+```
 
 ### Run without make command
 
@@ -47,15 +51,21 @@ To run application with docker
 
 To run coverge of unit testing with go command
 
-```go test ./... -cover```
+```
+go test ./... -cover
+```
 
 To run application with go command
 
-```go run main.go```
+```
+go run main.go
+```
 
 #### Executing with Docker
 
 To run this application 
 
-```docker-compose up --build```
+```
+docker-compose up --build
+```
 
