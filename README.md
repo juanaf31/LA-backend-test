@@ -11,7 +11,7 @@ This application is a simple REST API for checking saldo and transfer using [Gol
 * Golang
 * MySQL
 * Docker
-* [GCC] (https://jmeubank.github.io/tdm-gcc/) for unit testing (for unit testing)
+* [GCC](https://jmeubank.github.io/tdm-gcc) for unit testing (for unit testing)
 * (Optional) Install `make` program for your system to run this application easier
 
 ### For Development
