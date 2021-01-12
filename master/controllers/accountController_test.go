@@ -25,6 +25,11 @@ var mockTrans = &models.Transfer{
 	Receiver: "555111",
 	Amount: 1000,
 }
+
+var exceedMockTrans = &models.Transfer{
+	Receiver: "555112",
+	Amount: 100000,
+}
 var badMockTrans = &WrongTransfer{
 	Amount: 100,
 }
@@ -91,7 +96,6 @@ func TestAccController_Transfer(t *testing.T){
 	}
 	response := httptest.NewRecorder()
 	router.ServeHTTP(response, req)
-	log.Println(response.Body)
 	assert.Equal(t, 201, response.Code, "Response 201 is expected")
 }
 func TestAccController_TransferFailUser(t *testing.T){
@@ -103,6 +107,5 @@ func TestAccController_TransferFailUser(t *testing.T){
 	}
 	response := httptest.NewRecorder()
 	router.ServeHTTP(response, req)
-	log.Println(response.Body)
 	assert.Equal(t, 400, response.Code, "Response 400 is expected")
 }
